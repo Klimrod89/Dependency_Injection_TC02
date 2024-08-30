@@ -1,11 +1,13 @@
 using BlazorDIWithSample.Components;
+using DemoLibrary.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
+builder.Services.AddTransient<IDemo, UtcDemo>();
+builder.Services.AddTransient<IProcessDemo, ProcessDemo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
