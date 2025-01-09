@@ -1,15 +1,7 @@
 ﻿
 
 using DemoLibrary.Data;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
-// Configuration
-IConfigurationBuilder builder = new ConfigurationBuilder()
-                        .SetBasePath(Directory.GetCurrentDirectory())
-                        .AddJsonFile("appsettings.json", true, true);
-IConfigurationRoot config = builder.Build();
-
 
 
 // Dependency Injection
